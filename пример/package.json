@@ -1,0 +1,38 @@
+{
+  "name": "default_project",
+  "version": "0.0.1",
+  "description": "default_project",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Evgeniy Kuzovlev",
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "^2.11.1",
+    "gulp": "^3.9.0",
+    "gulp-autoprefixer": "^3.1.0",
+    "gulp-concat": "^2.6.0",
+    "gulp-cssnano": "^2.1.0",
+    "gulp-filter": "^4.0.0",
+    "gulp-font2css": "^0.1.2",
+    "gulp-if": "^2.0.2",
+    "gulp-imagemin": "^2.4.0",
+    "gulp-include": "^2.3.0",
+    "gulp-minify": "0.0.11",
+    "gulp-order": "^1.1.1",
+    "gulp-sass": "^3.0.0",
+    "gulp-sass-glob": "^1.0.8",
+    "gulp-sourcemaps": "^1.6.0",
+    "gulp-watch": "^4.3.5",
+    "gulp.spritesmith": "^6.2.0",
+    "merge-stream": "^1.0.0",
+    "mkdirp": "^0.5.1",
+    "modernizr": "^3.3.1",
+    "rimraf": "^2.5.2",
+    "gulp-svg-sprites": "^4.1.1"
+  },
+  "dependencies": {
+    "gulp-wait": "0.0.2"
+  }
+}

@@ -1,0 +1,230 @@
+::-webkit-input-placeholder {
+	color: $fg--placeholder;
+}
+::-moz-placeholder {
+	color: $fg--placeholder;
+}
+:-moz-placeholder {
+	color: $fg--placeholder;
+}
+:-ms-input-placeholder {
+	color: $fg--placeholder;
+}
+
+// type="date"
+::-webkit-datetime-edit {
+}
+::-webkit-datetime-edit-fields-wrapper {
+}
+::-webkit-datetime-edit-text {
+}
+::-webkit-datetime-edit-month-field {
+}
+::-webkit-datetime-edit-day-field {
+}
+::-webkit-datetime-edit-year-field {
+}
+::-webkit-inner-spin-button {
+	display: none;
+}
+::-webkit-calendar-picker-indicator {
+	display: none;
+}
+::-webkit-inner-cancel-button {
+	display: none;
+}
+::-webkit-clear-button {
+	display: none;
+}
+
+// type="search"
+::-webkit-search-cancel-button {
+	display: none;
+}
+
+// ios play video button
+*::-webkit-media-controls-panel {
+	display: none !important;
+	-webkit-appearance: none;
+}
+*::--webkit-media-controls-play-button {
+	display: none !important;
+	-webkit-appearance: none;
+}
+*::-webkit-media-controls-start-playback-button {
+	display: none !important;
+	-webkit-appearance: none;
+}
+
+// btns
+.btn,
+button,
+[type="submit"],
+[type="reset"] {
+	font: inherit;
+	font-size: 14px;
+	font-weight: 500;
+	line-height: 1;
+	display: block;
+	width: 100%;
+	height: auto;
+	margin: 0;
+	padding: 12px 20px;
+	cursor: pointer;
+	transition: all 0.2s;
+	text-align: center;
+	text-decoration: none;
+	color: #fff;
+	border: 1px solid $bg--gold;
+	border-radius: 0;
+	background: $bg--gold;
+	&:hover,
+	&:focus {
+		text-decoration: none;
+		color: $fg;
+		border-color: $fg;
+	}
+}
+.btn--light {
+	color: #221c1d;
+	border-color: #221c1d;
+	background: #fff;
+	&:hover,
+	&:focus {
+		color: $fg--gold;
+		border-color: $fg--gold;
+	}
+}
+.btn--basket-order {
+	@include breakpoint(md) {
+		width: 265px;
+	}
+}
+
+%common {
+	font: inherit;
+	display: block;
+	width: 100%;
+	margin: 0;
+	padding: 10px 20px;
+	transition: all 0.2s;
+	color: $fg;
+	border: 1px solid $fg;
+	border-radius: 0;
+	background: $bg;
+
+	&:hover,
+	&:focus {
+		border-color: lighten($fg, 50);
+	}
+}
+
+// label
+label {
+	display: block;
+	margin: 0;
+	margin-bottom: 5px;
+
+	&.require:after {
+		content: " *";
+		font-weight: 700;
+		// color: $fg--bad;
+	}
+}
+
+// text fields
+input {
+	@extend %common;
+}
+textarea {
+	@extend %common;
+	resize: none;
+}
+
+// select
+select {
+	@extend %common;
+}
+.jq-selectbox {
+	display: block;
+	border: 1px solid #ccc;
+	background: #fff;
+	&:hover,
+	&:focus {
+		border-color: $fg--gold;
+	}
+	select {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		margin: 0;
+		padding: 0;
+		opacity: 0;
+	}
+	&__select-text {
+		font-size: 14px;
+		font-weight: 700;
+		padding: 9px 40px 9px 10px;
+	}
+	&__trigger-arrow {
+		line-height: 0;
+		position: absolute;
+		top: 14px;
+		right: 14px;
+		@include sprite($s-select_arrow);
+	}
+	&__dropdown {
+		top: 100%;
+		right: -1px;
+		left: -1px;
+		width: calc(100% + 2px);
+		padding: 12px 20px;
+		cursor: default;
+		border: 1px solid $fg--gold;
+		background: #fff;
+		ul {
+			margin: 0;
+			padding: 0;
+			list-style: none;
+		}
+		li {
+			font-size: 14px;
+			margin: 0;
+			padding: 8px 0;
+			cursor: pointer;
+			color: #b3b8b7;
+			&:hover {
+				color: $fg--gold;
+			}
+		}
+	}
+}
+
+// checkbox, radio
+[type="radio"],
+[type="checkbox"] {
+	display: inline-block;
+	width: auto;
+	margin: 0;
+	padding: 0;
+}
+
+.jq-checkbox {
+	display: inline-block;
+	box-sizing: border-box;
+	width: 13px;
+	height: 13px;
+	cursor: pointer;
+	vertical-align: middle;
+	border: 1px solid #b7b7b7;
+	background: #fff;
+	&.checked .jq-checkbox__div {
+		display: block;
+		width: 7px;
+		height: 7px;
+		margin: 2px;
+		background: $bg--gold;
+	}
+}
